@@ -48,9 +48,10 @@ class NumberedCanvas(canvas.Canvas):
             self.setStrokeColor(colors.HexColor("#e2e8f0"))
             self.setLineWidth(0.5)
             self.line(36, 810, 559, 810)
-            self.drawString(36, 815, "Laporan Analisis Interaksi Media Sosial Pegawai - Kanwil Kemenkumham Kepri")
+            self.drawString(36, 815, "Laporan Analisis Interaksi Media Sosial Pegawai - Kanwil Kementerian Hukum Kepri")
         
         # Footer line & page numbers
+
         self.setStrokeColor(colors.HexColor("#e2e8f0"))
         self.setLineWidth(0.5)
         self.line(36, 40, 559, 40)
@@ -232,8 +233,9 @@ def generate_pdf_report(date_filter=None, divisi_filter=None, search_query=None)
     # Header Banner Block
     story.append(Paragraph("LAPORAN REKAPITULASI &amp; ANALISIS INTERAKSI MEDIA SOSIAL PEGAWAI", style_title))
     story.append(Spacer(1, 4))
-    story.append(Paragraph("KANTOR WILAYAH KEMENTERIAN HUKUM DAN HAM KEPULAUAN RIAU", style_subtitle))
+    story.append(Paragraph("KANTOR WILAYAH KEMENTERIAN HUKUM KEPULAUAN RIAU", style_subtitle))
     story.append(Spacer(1, 4))
+
     
     date_str = f"Periode Audit: {date_filter}" if date_filter else "Periode Audit: Seluruh Batch"
     div_str = f" | Divisi: {divisi_filter}" if divisi_filter else ""
